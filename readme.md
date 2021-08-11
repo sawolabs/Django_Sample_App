@@ -1,4 +1,4 @@
-##How to Integrate SAWO SDK to Django App
+#How to Integrate SAWO SDK to Django App
 
 Requirements – Python, pip.
 
