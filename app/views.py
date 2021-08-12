@@ -2,6 +2,7 @@ from django.http.response import HttpResponse
 from django.shortcuts import render
 from sawo import createTemplate, getContext, verifyToken
 import json;
+import os
 
 # Create your views here.
 
@@ -28,8 +29,9 @@ def index(request):
 def login(request):
     setLoaded()
     setPayload(load if loaded<2 else '')
+    print(os.environ.get('api_key'))
     config = {
-                "auth_key": "785ha-hdjsdsd-799-ss345",
+                "auth_key": os.environ.get('api_key'),
                 "identifier": "email",
                 "to": "receive"
     }
