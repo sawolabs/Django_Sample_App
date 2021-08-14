@@ -11,7 +11,7 @@ def main():
     print('*********************************************')
     dotenv.read_dotenv()
     
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'SawoDjango.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'sawoDjango.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
