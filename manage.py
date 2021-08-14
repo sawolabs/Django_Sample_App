@@ -9,7 +9,7 @@ def main():
     """Run administrative tasks."""
     
     print('*********************************************')
-    dotenv.read_dotenv()
+    dotenv.read_dotenv(override=True)
     
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'sawoDjango.settings')
     try:
