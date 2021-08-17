@@ -3,7 +3,7 @@ from django.shortcuts import render
 from sawo import createTemplate, getContext, verifyToken
 import json
 import os
-from decouple import config
+# from decouple import config
 
 # Create your views here.
 
@@ -32,7 +32,7 @@ def login(request):
     setPayload(load if loaded<2 else '')
     # print(config('api_key'))
     configuration = {
-                "auth_key": config('api_key'),
+                "auth_key": "8301d0f5-40ab-4361-92b5-df595214697f",
                 "identifier": "email",
                 "to": "receive"
     }
