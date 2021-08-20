@@ -32,7 +32,7 @@ def login(request):
     setPayload(load if loaded<2 else '')
     # print(config('api_key'))
     configuration = {
-                "auth_key": "8301d0f5-40ab-4361-92b5-df595214697f",
+                "auth_key": os.environ.get("api_key"),
                 "identifier": "email",
                 "to": "receive"
     }

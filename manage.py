@@ -2,14 +2,14 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-# import dotenv
+import dotenv
 
 
 def main():
     """Run administrative tasks."""
 
     print('*********************************************')
-    # dotenv.read_dotenv(override=True)
+    dotenv.read_dotenv(override=True)
 
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'sawoDjango.settings')
     try:
