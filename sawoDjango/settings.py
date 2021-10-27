@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+# import dotenv
+
 # import environ
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -27,7 +29,8 @@ SECRET_KEY = 'django-insecure-k!$+4v&h@gf=&!2z3@8#a6%4i^_9_chul%q)2(9^=*wkj!f)wv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['sawo-django-sample-app.herokuapp.com', '127.0.0.1',
+    'localhost']
 
 
 # Application definition
@@ -119,10 +122,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-PROJECT_ROOT = os.path.join(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
-STATIC_URL = 'static/'
+# PROJECT_ROOT = os.path.join(os.path.abspath(__file__))
+
+STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

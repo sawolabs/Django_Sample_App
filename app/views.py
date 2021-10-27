@@ -1,8 +1,9 @@
 from django.http.response import HttpResponse
 from django.shortcuts import render
 from sawo import createTemplate, getContext, verifyToken
-import json;
+import json
 import os
+# from decouple import config
 
 # Create your views here.
 
@@ -29,13 +30,13 @@ def index(request):
 def login(request):
     setLoaded()
     setPayload(load if loaded<2 else '')
-    print(os.environ.get('api_key'))
-    config = {
-                "auth_key": os.environ.get('api_key'),
+    # print(config('api_key'))
+    configuration = {
+                "auth_key": os.environ.get("api_key"),
                 "identifier": "email",
                 "to": "receive"
     }
-    context = {"sawo":config,"load":load,"title":"Home"}
+    context = {"sawo":configuration,"load":load,"title":"Home"}
     
     return render(request,"login.html", context)
 
