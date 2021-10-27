@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-k!$+4v&h@gf=&!2z3@8#a6%4i^_9_chul%q)2(9^=*wkj!f)wv
 DEBUG = True
 
 ALLOWED_HOSTS = ['sawo-django-sample-app.herokuapp.com', '127.0.0.1',
-    'localhost',]
+    'localhost']
 
 
 # Application definition
